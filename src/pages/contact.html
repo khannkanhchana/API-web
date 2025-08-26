@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Contact</title>
+  <link href="../output.css" rel="stylesheet">
+  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+</head>
+<!-- Navbar -->
+  <nav class="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16 items-center">
+        <!-- Logo -->
+        <div class="flex-shrink-0 text-white text-2xl font-bold">
+          NaNaShop
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex space-x-6 text-white font-medium">
+          <a href="/src/index.html" class="hover:text-yellow-300 transition">Home</a>
+          <a href="/src/pages/about.html" class="hover:text-yellow-300 transition">About</a>
+          <a href="/src/pages/product.html" class="hover:text-yellow-300 transition">Products</a>
+          <a href="/src/pages/contact.html" class="hover:text-yellow-300 transition">Contact</a>
+        </div>
+
+        <!-- Desktop Button -->
+        <div class="hidden md:block">
+          <a href="./pages/sign-in.html" class="bg-white text-indigo-700 px-4 py-2 rounded-xl hover:bg-yellow-300 transition-all font-semibold">
+            Get Started
+          </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden">
+          <button id="menu-toggle" class="text-white focus:outline-none text-2xl">
+            ☰
+          </button>
+        </div>
+      </div>
+    </div>
+      <!-- Added overlay for better mobile menu experience -->
+        <div class="menu-overlay" id="menuOverlay" onclick="closeMenu()"></div>
+        
+        <!-- Mobile Menu Dropdown -->
+        <div class="mobile-menu fixed top-0 right-0 h-full w-64 bg-purple-800 bg-opacity-95 backdrop-blur-sm md:hidden" id="mobileMenu">
+            <div class="p-6 pt-20">
+                <nav class="flex flex-col space-y-6">
+                    <a href="/src/index.html" class="text-xl hover:text-pink-200 transition-colors" onclick="closeMenu()">Home</a>
+                    <a href="./about.html" class="text-xl hover:text-pink-200 transition-colors" onclick="closeMenu()">About</a>
+                    <a href="./product.html" class="text-xl hover:text-pink-200 transition-colors" onclick="closeMenu()">Products</a>
+                    <a href="./contact.html" class="text-xl hover:text-pink-200 transition-colors" onclick="closeMenu()">Contact</a>
+                    <button class="bg-white text-purple-600 px-6 py-3 rounded-full font-semibold hover:bg-pink-50 transition-colors mt-4" onclick="closeMenu()">
+                        Get Started
+                    </button>
+                </nav>
+            </div>
+        </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-2 text-white font-medium">
+      <a href="/src/index.html" class="block hover:text-yellow-300 transition">Home</a>
+      <a href="./about.html" class="block hover:text-yellow-300 transition">About</a>
+      <a href="./product.html" class="block hover:text-yellow-300 transition">Products</a>
+      <a href="./contact.html" class="block hover:text-yellow-300 transition">Contact</a>
+      <a href="../src/pages/product.html" class="block bg-white text-indigo-700 text-center px-4 py-2 rounded-xl hover:bg-yellow-300 transition-all font-semibold mt-2">
+        Get Started
+      </a>
+    </div>
+  </nav>
+
+
+<main  class="p-5">
+    <form action="https://fabform.io/f/{form-id}" method="post">
+<section class="text-gray-600 body-font relative">
+    <div class="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
+        <div
+            class="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
+            <iframe width="100%" height="100%" class="absolute inset-0" frameborder="0" title="map" marginheight="0"
+                marginwidth="0" scrolling="no"
+                src="https://maps.google.com/maps?width=100%&height=600&hl=en&q=%C4%B0zmir+(My%20Business%20Name)&ie=UTF8&t=&z=14&iwloc=B&output=embed"
+                style="filter: grayscale(1) contrast(1.2) opacity(0.4);"></iframe>
+            <div class="bg-white relative flex flex-wrap py-6 rounded shadow-md">
+                <div class="lg:w-1/2 px-6">
+                    <h2 class="title-font font-semibold text-gray-900 tracking-widest text-xs">ADDRESS</h2>
+                    <p class="mt-1">Photo booth tattooed prism, portland taiyaki hoodie neutra typewriter</p>
+                </div>
+                <div class="lg:w-1/2 px-6 mt-4 lg:mt-0">
+                    <h2 class="title-font font-semibold text-gray-900 tracking-widest text-xs">EMAIL</h2>
+                    <a class="text-red-500 leading-relaxed">nanashop@email.com</a>
+                    <h2 class="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">PHONE</h2>
+                    <p class="leading-relaxed">123-456-7890</p>
+                </div>
+            </div>
+        </div>
+        <div class="lg:w-1/3 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
+            <h2 class="text-gray-900 text-lg mb-1 font-medium title-font">Feedback</h2>
+            <p class="leading-relaxed mb-5 text-gray-600">Post-ironic portland shabby chic echo park, banjo fashion axe
+            </p>
+            <div class="relative mb-4">
+                <label for="name" class="leading-7 text-sm text-gray-600">Name</label>
+                <input type="text" id="name" name="name" class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+            </div>
+            <div class="relative mb-4">
+                <label for="email" class="leading-7 text-sm text-gray-600">Email</label>
+                <input type="email" id="email" name="email" class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+            </div>
+            <div class="relative mb-4">
+                <label for="message" class="leading-7 text-sm text-gray-600">Message</label>
+                <textarea id="message" name="message" class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+            </div>
+            <button class="text-white bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded text-lg">Submit</button>
+            <a href="https://veilmail.io/e/FkKh7o" class="mt-2 font-medium text-blue-600 hover:underline">Or click here to reveal our protected email address</a>
+         
+        </div>
+    </div>
+</section>
+</form>
+</main>
+<!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Column 1 -->
+                <div>
+                    <h3 class="text-white text-lg font-semibold mb-4">Company</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Careers</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Blog</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Press</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 2 -->
+                <div>
+                    <h3 class="text-white text-lg font-semibold mb-4">Product</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white transition-colors">Features</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Pricing</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Integrations</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Roadmap</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 3 -->
+                <div>
+                    <h3 class="text-white text-lg font-semibold mb-4">Resources</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white transition-colors">Documentation</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">API Reference</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Community</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Webinars</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 4 -->
+                <div>
+                    <h3 class="text-white text-lg font-semibold mb-4">Connect</h3>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-indigo-600 transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-pink-600 transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-red-600 transition-colors">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                    <p class="text-sm">
+                        Subscribe to our newsletter for the latest updates
+                    </p>
+                    <div class="mt-3 flex">
+                        <input type="email" placeholder="Your email" class="bg-gray-800 text-white px-4 py-2 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500 w-full">
+                        <button class="bg-blue-600 text-white px-4 py-2 rounded-r-lg hover:bg-blue-700 transition-colors">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <a href="#" class="text-white text-2xl font-bold flex items-center">
+                        <i class="fas fa-crown text-yellow-500 mr-2"></i> NaNaShop
+                    </a>
+                </div>
+                <div class="text-sm">
+                    &copy; 2023 NaNaShop. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+</html>
